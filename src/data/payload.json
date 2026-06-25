@@ -1,0 +1,586 @@
+{
+  "version": "2.1.0",
+  "theme": {
+    "primary": "#FF9933",
+    "secondary": "#E67E00",
+    "background": "#FFF5E6",
+    "surface": "#FFFFFF",
+    "text": "#1A1A1A",
+    "textSecondary": "#6B6B6B",
+    "accent": "#FF6B35",
+    "border": "#F0E0C8"
+  },
+  "active_campaign": "back_to_school",
+  "campaigns": [
+    {
+      "id": "back_to_school",
+      "name": "Back to School Mega-Sale",
+      "theme": {
+        "primary": "#4F7DFF",
+        "secondary": "#7B61FF",
+        "background": "#FFFBE6",
+        "surface": "#FFFFFF",
+        "text": "#1F2937",
+        "textSecondary": "#6B7280",
+        "accent": "#4F7DFF",
+        "border": "#FFE082"
+      },
+      "lottie_url": "https://assets.example.com/back_to_school.json",
+      "featured_collection_title": "Lunchboxes & Bags",
+      "overlay": {
+        "type": "FULL_SCREEN_OVERLAY",
+        "animation_url": "https://assets.example.com/paper_airplanes.json"
+      }
+    },
+    {
+      "id": "summer_playhouse",
+      "name": "Summer Playhouse Festival",
+      "theme": {
+        "primary": "#22C7E8",
+        "secondary": "#00B8D9",
+        "background": "#EAFBFF",
+        "surface": "#FFFFFF",
+        "text": "#164E63",
+        "textSecondary": "#64748B",
+        "accent": "#7EE8FA",
+        "border": "#B2F5FF"
+      },
+      "lottie_url": "https://assets.example.com/water_splash.json",
+      "featured_collection_title": "Summer Fun",
+      "overlay": {
+        "type": "FULL_SCREEN_OVERLAY",
+        "animation_url": "https://assets.example.com/beach_ball.json"
+      }
+    },
+    {
+      "id": "mystery_carnival",
+      "name": "Mystery Gift Carnival",
+      "theme": {
+        "primary": "#FF4FA2",
+        "secondary": "#C026D3",
+        "background": "#FFF0F8",
+        "surface": "#FFFFFF",
+        "text": "#1F2937",
+        "textSecondary": "#6B7280",
+        "accent": "#FF85C2",
+        "border": "#FFC6E5"
+      },
+      "lottie_url": "https://assets.example.com/confetti.json",
+      "featured_collection_title": "Mystery Picks",
+      "overlay": {
+        "type": "FULL_SCREEN_OVERLAY",
+        "animation_url": "https://assets.example.com/confetti_carnival.json"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "BANNER_HERO",
+      "id": "banner_hero_main",
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=300&fit=crop",
+      "title": "Mystery Gift Carnival 🎉",
+      "subtitle": "Spin to reveal surprise deals on your kiddo's favourites!",
+      "cta_label": "Reveal My Gift",
+      "badge": "Limited Time",
+      "action": {
+        "type": "DEEP_LINK",
+        "payload": { "url": "/campaign/mystery-carnival" }
+      }
+    },
+    {
+      "type": "DYNAMIC_COLLECTION",
+      "id": "collection_mystery_picks",
+      "title": "Mystery Picks 🎁",
+      "subtitle": "Exclusive carnival deals",
+      "see_all_action": {
+        "type": "OPEN_CATEGORY",
+        "payload": { "categoryId": "mystery-picks", "title": "Mystery Picks" }
+      },
+      "items": [
+        {
+          "id": "prod_001",
+          "name": "Surprise Toy Box",
+          "price": 299,
+          "original_price": 599,
+          "image_url": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=200&h=200&fit=crop",
+          "badge": "50% OFF",
+          "rating": 4.5,
+          "action": {
+            "type": "APPLY_MYSTERY_GIFT_COUPON",
+            "payload": { "couponCode": "MYSTERY50", "productId": "prod_001" }
+          }
+        },
+        {
+          "id": "prod_002",
+          "name": "Carnival Activity Kit",
+          "price": 449,
+          "original_price": 799,
+          "image_url": "https://images.unsplash.com/photo-1566140967404-b8b3932483f5?w=200&h=200&fit=crop",
+          "badge": "Mystery Deal",
+          "rating": 4.8,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_002", "name": "Carnival Activity Kit", "price": 449 }
+          }
+        },
+        {
+          "id": "prod_003",
+          "name": "Confetti Art Set",
+          "price": 199,
+          "original_price": 349,
+          "image_url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=200&h=200&fit=crop",
+          "badge": "43% OFF",
+          "rating": 4.3,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_003", "name": "Confetti Art Set", "price": 199 }
+          }
+        },
+        {
+          "id": "prod_004",
+          "name": "Carnival Dress Up",
+          "price": 599,
+          "original_price": 999,
+          "image_url": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop",
+          "badge": "40% OFF",
+          "rating": 4.6,
+          "action": {
+            "type": "APPLY_MYSTERY_GIFT_COUPON",
+            "payload": { "couponCode": "CARNIVAL40", "productId": "prod_004" }
+          }
+        },
+        {
+          "id": "prod_005",
+          "name": "Magic Spin Top",
+          "price": 149,
+          "original_price": 249,
+          "image_url": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=200&h=200&fit=crop",
+          "badge": "New",
+          "rating": 4.4,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_005", "name": "Magic Spin Top", "price": 149 }
+          }
+        }
+      ]
+    },
+    {
+      "type": "PRODUCT_GRID_2X2",
+      "id": "grid_essentials",
+      "title": "Baby Essentials",
+      "items": [
+        {
+          "id": "prod_010",
+          "name": "Organic Baby Lotion",
+          "price": 349,
+          "original_price": 429,
+          "image_url": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=200&h=200&fit=crop",
+          "badge": "Best Seller",
+          "rating": 4.9,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_010", "name": "Organic Baby Lotion", "price": 349 }
+          }
+        },
+        {
+          "id": "prod_011",
+          "name": "Soft Cotton Diapers",
+          "price": 799,
+          "original_price": 999,
+          "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=200&h=200&fit=crop",
+          "badge": "20% OFF",
+          "rating": 4.7,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_011", "name": "Soft Cotton Diapers", "price": 799 }
+          }
+        },
+        {
+          "id": "prod_012",
+          "name": "Baby Wipes Pack",
+          "price": 249,
+          "original_price": 299,
+          "image_url": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=200&h=200&fit=crop",
+          "rating": 4.6,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_012", "name": "Baby Wipes Pack", "price": 249 }
+          }
+        },
+        {
+          "id": "prod_013",
+          "name": "Rash Cream 50g",
+          "price": 189,
+          "original_price": 220,
+          "image_url": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=200&h=200&fit=crop",
+          "badge": "Top Rated",
+          "rating": 4.8,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_013", "name": "Rash Cream 50g", "price": 189 }
+          }
+        }
+      ]
+    },
+    {
+      "type": "BANNER_HERO",
+      "id": "banner_hero_snacks",
+      "image_url": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=800&h=280&fit=crop",
+      "title": "Snacks under ₹99 🍭",
+      "subtitle": "Healthy bites your kiddo will love",
+      "cta_label": "Shop Snacks",
+      "action": {
+        "type": "DEEP_LINK",
+        "payload": { "url": "/category/snacks-under-99" }
+      }
+    },
+    {
+      "type": "DYNAMIC_COLLECTION",
+      "id": "collection_snacks",
+      "title": "Snacks Under ₹99 🍬",
+      "subtitle": "Healthy & yummy picks",
+      "see_all_action": {
+        "type": "OPEN_CATEGORY",
+        "payload": { "categoryId": "snacks", "title": "Snacks" }
+      },
+      "items": [
+        {
+          "id": "prod_020",
+          "name": "Makhana Puffs",
+          "price": 79,
+          "image_url": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=200&h=200&fit=crop",
+          "badge": "Healthy",
+          "rating": 4.4,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_020", "name": "Makhana Puffs", "price": 79 }
+          }
+        },
+        {
+          "id": "prod_021",
+          "name": "Oats Biscuits",
+          "price": 49,
+          "image_url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop",
+          "rating": 4.2,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_021", "name": "Oats Biscuits", "price": 49 }
+          }
+        },
+        {
+          "id": "prod_022",
+          "name": "Fruit Chews",
+          "price": 89,
+          "image_url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=200&h=200&fit=crop",
+          "badge": "No Sugar",
+          "rating": 4.5,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_022", "name": "Fruit Chews", "price": 89 }
+          }
+        },
+        {
+          "id": "prod_023",
+          "name": "Multigrain Sticks",
+          "price": 69,
+          "image_url": "https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?w=200&h=200&fit=crop",
+          "rating": 4.1,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_023", "name": "Multigrain Sticks", "price": 69 }
+          }
+        },
+        {
+          "id": "prod_024",
+          "name": "Ragi Cookies",
+          "price": 99,
+          "image_url": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=200&h=200&fit=crop",
+          "badge": "New",
+          "rating": 4.6,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_024", "name": "Ragi Cookies", "price": 99 }
+          }
+        }
+      ]
+    },
+    {
+      "type": "PRODUCT_GRID_2X2",
+      "id": "grid_learning",
+      "title": "Learning & Growth",
+      "items": [
+        {
+          "id": "prod_030",
+          "name": "Alphabet Puzzle",
+          "price": 399,
+          "original_price": 549,
+          "image_url": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=200&h=200&fit=crop",
+          "badge": "Ages 2+",
+          "rating": 4.7,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_030", "name": "Alphabet Puzzle", "price": 399 }
+          }
+        },
+        {
+          "id": "prod_031",
+          "name": "Number Flash Cards",
+          "price": 199,
+          "image_url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200&h=200&fit=crop",
+          "rating": 4.5,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_031", "name": "Number Flash Cards", "price": 199 }
+          }
+        },
+        {
+          "id": "prod_032",
+          "name": "Shape Sorter Toy",
+          "price": 499,
+          "original_price": 699,
+          "image_url": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=200&h=200&fit=crop",
+          "badge": "29% OFF",
+          "rating": 4.8,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_032", "name": "Shape Sorter Toy", "price": 499 }
+          }
+        },
+        {
+          "id": "prod_033",
+          "name": "Story Time Books Set",
+          "price": 649,
+          "original_price": 899,
+          "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200&h=200&fit=crop",
+          "badge": "Top Pick",
+          "rating": 4.9,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_033", "name": "Story Time Books Set", "price": 649 }
+          }
+        }
+      ]
+    },
+    {
+      "type": "DYNAMIC_COLLECTION",
+      "id": "collection_summer",
+      "title": "Summer Essentials ☀️",
+      "subtitle": "Beat the heat with kiddo",
+      "see_all_action": {
+        "type": "OPEN_CATEGORY",
+        "payload": { "categoryId": "summer", "title": "Summer Essentials" }
+      },
+      "items": [
+        {
+          "id": "prod_040",
+          "name": "Water Splash Mat",
+          "price": 599,
+          "original_price": 899,
+          "image_url": "https://images.unsplash.com/photo-1530053969600-caed2596d242?w=200&h=200&fit=crop",
+          "badge": "Summer Hit",
+          "rating": 4.7,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_040", "name": "Water Splash Mat", "price": 599 }
+          }
+        },
+        {
+          "id": "prod_041",
+          "name": "Kids Sunscreen SPF50",
+          "price": 449,
+          "image_url": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=200&h=200&fit=crop",
+          "badge": "Derma Safe",
+          "rating": 4.6,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_041", "name": "Kids Sunscreen SPF50", "price": 449 }
+          }
+        },
+        {
+          "id": "prod_042",
+          "name": "Beach Ball Set",
+          "price": 249,
+          "original_price": 349,
+          "image_url": "https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?w=200&h=200&fit=crop",
+          "rating": 4.3,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_042", "name": "Beach Ball Set", "price": 249 }
+          }
+        },
+        {
+          "id": "prod_043",
+          "name": "Cooling Towel",
+          "price": 199,
+          "image_url": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=200&h=200&fit=crop",
+          "rating": 4.2,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_043", "name": "Cooling Towel", "price": 199 }
+          }
+        },
+        {
+          "id": "prod_044",
+          "name": "Petting Zoo Ticket",
+          "price": 350,
+          "image_url": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=200&h=200&fit=crop",
+          "badge": "Book Now",
+          "rating": 4.9,
+          "action": {
+            "type": "BOOK_EVENT",
+            "payload": { "eventId": "petting-zoo-2024", "title": "Petting Zoo" }
+          }
+        }
+      ]
+    },
+    {
+      "type": "NEW_COMPONENT_V2",
+      "id": "unknown_block_resilience_test",
+      "some_future_field": "This block type is unknown and must be silently dropped",
+      "nested": { "deep": true }
+    },
+    {
+      "type": "PRODUCT_GRID_2X2",
+      "id": "grid_newborn",
+      "title": "Newborn Essentials",
+      "items": [
+        {
+          "id": "prod_050",
+          "name": "Swaddle Blanket",
+          "price": 549,
+          "original_price": 699,
+          "image_url": "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=200&h=200&fit=crop",
+          "badge": "Soft",
+          "rating": 4.9,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_050", "name": "Swaddle Blanket", "price": 549 }
+          }
+        },
+        {
+          "id": "prod_051",
+          "name": "Night Light Projector",
+          "price": 899,
+          "original_price": 1299,
+          "image_url": "https://images.unsplash.com/photo-1519689373023-dd07c7988603?w=200&h=200&fit=crop",
+          "badge": "31% OFF",
+          "rating": 4.7,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_051", "name": "Night Light Projector", "price": 899 }
+          }
+        },
+        {
+          "id": "prod_052",
+          "name": "Baby Monitor",
+          "price": 2499,
+          "original_price": 3499,
+          "image_url": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop",
+          "badge": "HD Cam",
+          "rating": 4.8,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_052", "name": "Baby Monitor", "price": 2499 }
+          }
+        },
+        {
+          "id": "prod_053",
+          "name": "Teething Ring Set",
+          "price": 299,
+          "image_url": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=200&h=200&fit=crop",
+          "rating": 4.5,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_053", "name": "Teething Ring Set", "price": 299 }
+          }
+        }
+      ]
+    },
+    {
+      "type": "BANNER_HERO",
+      "id": "banner_hero_lunchboxes",
+      "image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=280&fit=crop",
+      "title": "Lunchboxes & Bags 🎒",
+      "subtitle": "Back to school, back in style",
+      "cta_label": "Shop Now",
+      "badge": "School Season",
+      "action": {
+        "type": "OPEN_CATEGORY",
+        "payload": { "categoryId": "lunchboxes-bags", "title": "Lunchboxes & Bags" }
+      }
+    },
+    {
+      "type": "DYNAMIC_COLLECTION",
+      "id": "collection_lunchboxes",
+      "title": "Lunchboxes & Bags 🎒",
+      "subtitle": "Trending for back to school",
+      "see_all_action": {
+        "type": "OPEN_CATEGORY",
+        "payload": { "categoryId": "lunchboxes", "title": "Lunchboxes & Bags" }
+      },
+      "items": [
+        {
+          "id": "prod_060",
+          "name": "Unicorn Lunchbox",
+          "price": 499,
+          "original_price": 699,
+          "image_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=200&fit=crop",
+          "badge": "Trending",
+          "rating": 4.8,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_060", "name": "Unicorn Lunchbox", "price": 499 }
+          }
+        },
+        {
+          "id": "prod_061",
+          "name": "Dinosaur Backpack",
+          "price": 799,
+          "original_price": 1099,
+          "image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop",
+          "badge": "Best Seller",
+          "rating": 4.9,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_061", "name": "Dinosaur Backpack", "price": 799 }
+          }
+        },
+        {
+          "id": "prod_062",
+          "name": "Superhero Water Bottle",
+          "price": 299,
+          "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=200&h=200&fit=crop",
+          "rating": 4.6,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_062", "name": "Superhero Water Bottle", "price": 299 }
+          }
+        },
+        {
+          "id": "prod_063",
+          "name": "Princess Pencil Case",
+          "price": 199,
+          "original_price": 269,
+          "image_url": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=200&h=200&fit=crop",
+          "badge": "26% OFF",
+          "rating": 4.5,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_063", "name": "Princess Pencil Case", "price": 199 }
+          }
+        },
+        {
+          "id": "prod_064",
+          "name": "Tiffin Bag Set",
+          "price": 349,
+          "image_url": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=200&h=200&fit=crop",
+          "rating": 4.4,
+          "action": {
+            "type": "ADD_TO_CART",
+            "payload": { "id": "prod_064", "name": "Tiffin Bag Set", "price": 349 }
+          }
+        }
+      ]
+    }
+  ]
+}

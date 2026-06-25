@@ -1,0 +1,36 @@
+{
+  "expo": {
+    
+    "name": "Kiddo SDUI",
+    "slug": "kiddo-sdui",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF9933"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.kiddo.sdui"
+    },
+    
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF9933"
+      },
+      "package": "com.kiddo.sdui"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [],
+    "platforms": ["android", "ios", "web"]
+  }
+}
